@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseAuthUI
 
 class LoginViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    
+    // MARK: - VC Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +28,21 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        // 1
+        guard let authUI = FUIAuth.defaultAuthUI()
+            else { return }
+        
+        // 2
+        authUI.delegate = self
+        
+        // 3
+        let authViewController = authUI.authViewController()
+        present(authViewController, animated: true)
     }
     
 
@@ -33,3 +57,49 @@ class LoginViewController: UIViewController {
     */
 
 }
+
+extension LoginViewController: FUIAuthDelegate {
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        if let error = error {
+            assertionFailure("Error signing in: \(error.localizedDescription)")
+            return
+        }
+        
+        print("handle user signup / login")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
