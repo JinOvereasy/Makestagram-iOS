@@ -16,6 +16,7 @@
 		0E0185F71F01BE730038F395 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0185F61F01BE730038F395 /* Login.storyboard */; };
 		0E0185F91F01BF020038F395 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0185F81F01BF020038F395 /* LoginViewController.swift */; };
 		0E2E009E1F02C498006A47BB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E009D1F02C498006A47BB /* Users.swift */; };
+		0E2E00A01F02CD7B006A47BB /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */; };
 		8A8F86B9321E7CC327A6F6DA /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBB95811528D3C81123A37D /* Pods_Makestagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0E0185F61F01BE730038F395 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0E0185F81F01BF020038F395 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E2E009D1F02C498006A47BB /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		3B1E605E90CD63F235620215 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		8DBB95811528D3C81123A37D /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45B140A386580B1E30E8B38 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				0E0185DA1F01AB3F0038F395 /* ViewController.swift */,
 				0E0185F81F01BF020038F395 /* LoginViewController.swift */,
+				0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */,
 				0E2E009C1F02C482006A47BB /* Models */,
 			);
 			name = "View Controllers";
@@ -263,6 +266,7 @@
 				0E2E009E1F02C498006A47BB /* Users.swift in Sources */,
 				0E0185F91F01BF020038F395 /* LoginViewController.swift in Sources */,
 				0E0185DB1F01AB3F0038F395 /* ViewController.swift in Sources */,
+				0E2E00A01F02CD7B006A47BB /* CreateUsernameViewController.swift in Sources */,
 				0E0185D91F01AB3F0038F395 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
