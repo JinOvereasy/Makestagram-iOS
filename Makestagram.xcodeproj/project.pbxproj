@@ -15,8 +15,9 @@
 		0E0185EB1F01BA310038F395 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E0185EA1F01BA310038F395 /* GoogleService-Info.plist */; };
 		0E0185F71F01BE730038F395 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0185F61F01BE730038F395 /* Login.storyboard */; };
 		0E0185F91F01BF020038F395 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0185F81F01BF020038F395 /* LoginViewController.swift */; };
-		0E2E009E1F02C498006A47BB /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E009D1F02C498006A47BB /* Users.swift */; };
 		0E2E00A01F02CD7B006A47BB /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */; };
+		0E2E00A31F02DD8F006A47BB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E00A21F02DD8F006A47BB /* UserService.swift */; };
+		0E2E00A51F02E6FE006A47BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E00A41F02E6FE006A47BB /* User.swift */; };
 		8A8F86B9321E7CC327A6F6DA /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBB95811528D3C81123A37D /* Pods_Makestagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +32,9 @@
 		0E0185EA1F01BA310038F395 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Makestagram/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E0185F61F01BE730038F395 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0E0185F81F01BF020038F395 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0E2E009D1F02C498006A47BB /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		0E2E00A21F02DD8F006A47BB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		0E2E00A41F02E6FE006A47BB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3B1E605E90CD63F235620215 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		8DBB95811528D3C81123A37D /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45B140A386580B1E30E8B38 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				0E0185D81F01AB3F0038F395 /* AppDelegate.swift */,
+				0E2E00A11F02DD5D006A47BB /* Services */,
 				0E0185F41F01BB620038F395 /* View Controllers */,
+				0E2E009C1F02C482006A47BB /* Models */,
 				0E0185EF1F01BB480038F395 /* Storyboards */,
 				0E0185EE1F01BB420038F395 /* Supporting */,
 			);
@@ -107,7 +111,6 @@
 				0E0185DA1F01AB3F0038F395 /* ViewController.swift */,
 				0E0185F81F01BF020038F395 /* LoginViewController.swift */,
 				0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */,
-				0E2E009C1F02C482006A47BB /* Models */,
 			);
 			name = "View Controllers";
 			path = ..;
@@ -116,9 +119,19 @@
 		0E2E009C1F02C482006A47BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0E2E009D1F02C498006A47BB /* Users.swift */,
+				0E2E00A41F02E6FE006A47BB /* User.swift */,
 			);
 			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E2E00A11F02DD5D006A47BB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E00A21F02DD8F006A47BB /* UserService.swift */,
+			);
+			name = Services;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		25F560794C50CD3A043DE717 /* Pods */ = {
@@ -263,11 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E2E009E1F02C498006A47BB /* Users.swift in Sources */,
 				0E0185F91F01BF020038F395 /* LoginViewController.swift in Sources */,
+				0E2E00A31F02DD8F006A47BB /* UserService.swift in Sources */,
 				0E0185DB1F01AB3F0038F395 /* ViewController.swift in Sources */,
 				0E2E00A01F02CD7B006A47BB /* CreateUsernameViewController.swift in Sources */,
 				0E0185D91F01AB3F0038F395 /* AppDelegate.swift in Sources */,
+				0E2E00A51F02E6FE006A47BB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
