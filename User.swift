@@ -11,7 +11,8 @@ import FirebaseDatabase.FIRDataSnapshot
 
 
 class User: NSObject {
-    // Mark: - Properties
+    
+    // MARK: - Properties
     let uid: String
     let username: String
     
@@ -66,16 +67,13 @@ class User: NSObject {
         if writeToUserDefaults {
             // 3
             let data = NSKeyedArchiver.archivedData(withRootObject: user)
-            
             // 4
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
         }
         _current = user
     }
     
-    
 }
-
 
 extension User: NSCoding {
     func encode(with aCoder: NSCoder) {

@@ -32,14 +32,11 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        // 1
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         
-        // 2
         authUI.delegate = self
         
-        // 3
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
@@ -47,7 +44,6 @@ class LoginViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -97,7 +93,6 @@ extension LoginViewController: FUIAuthDelegate {
                     // self.view.window?.makeKeyAndVisible()
                 }
             } else {
-                // 1.
                 self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
         })
@@ -106,12 +101,7 @@ extension LoginViewController: FUIAuthDelegate {
             if let user = user {
                 // handle existing user
                 User.setCurrent(user, writeToUserDefaults: true)
-                
-//                let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//                if let initialViewController = storyboard.instantiateInitialViewController() {
-//                    self.view.window?.rootViewController = initialViewController
-//                    self.view.window?.makeKeyAndVisible()
-                
+            
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()

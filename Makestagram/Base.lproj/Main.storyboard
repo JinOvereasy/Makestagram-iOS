@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Npe-T5-rpN">
             <objects>
-                <viewController id="Efa-kf-b30" sceneMemberID="viewController">
+                <viewController id="Efa-kf-b30" customClass="MainTabBarController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V4o-tu-tGR"/>
                         <viewControllerLayoutGuide type="bottom" id="fLf-FU-nqU"/>

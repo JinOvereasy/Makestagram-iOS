@@ -12,10 +12,9 @@ import FirebaseDatabase
 
 class CreateUsernameViewController: UIViewController {
 
-    // MARK: - Subviews
+    // MARK: - IBOutlets / Subviews
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
-    
     
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
@@ -49,6 +48,7 @@ class CreateUsernameViewController: UIViewController {
 //            if let initialViewController = storyboard.instantiateInitialViewController() {
 //                self.view.window?.rootViewController = initialViewController
 //                self.view.window?.makeKeyAndVisible()
+            
             let initialViewController = UIStoryboard.initialViewController(for: .main)
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
@@ -56,7 +56,6 @@ class CreateUsernameViewController: UIViewController {
         
         UserService.create(firUser, username: username) { (user) in
             guard let _ = user else {
-                
                 return
             }
         
@@ -68,8 +67,6 @@ class CreateUsernameViewController: UIViewController {
             }
         }
     }
-    
-    
     /*
     // MARK: - Navigation
 
