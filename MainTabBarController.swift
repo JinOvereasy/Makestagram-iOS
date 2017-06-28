@@ -9,8 +9,18 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    
+    // MARK: - Properties
+    let photoHelper = MGPhotoHelper()
+    
+    
+    // MARK: - Override func
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoHelper.completionHandler = { image in
+            print("handle image")
+        }
         
         delegate = self
         tabBar.unselectedItemTintColor = .black
@@ -20,6 +30,7 @@ class MainTabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -28,18 +39,16 @@ class MainTabBarController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 }
 
 extension MainTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.tabBarItem.tag == 1 {
-            // present photo taking action sheet
-            print("take photo")
-            
+            photoHelper.presentActionSheet(from: self)
             return false
-        } else {
-            return true
         }
+        return true
     }
 }
 
