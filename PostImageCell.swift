@@ -10,14 +10,14 @@ import UIKit
 
 class PostImageCell: UITableViewCell {
 
+    // MARK: - Subviews
+    
+    @IBOutlet weak var postImageView: UIImageView!
+
+    
+    // MARK: - Cell Lifestyle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
 
 }
