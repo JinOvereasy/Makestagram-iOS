@@ -31,6 +31,8 @@
 		0E2E00C01F056BDA006A47BB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2E00BE1F056BDA006A47BB /* Home.storyboard */; };
 		0ED5E2A01F057EE9003B001D /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5E29F1F057EE9003B001D /* PostImageCell.swift */; };
 		0ED5E2A21F0596AD003B001D /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5E2A11F0596AD003B001D /* PostHeaderCell.swift */; };
+		0ED5E2A41F059D44003B001D /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5E2A31F059D44003B001D /* PostActionCell.swift */; };
+		0ED5E2A61F06CD36003B001D /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5E2A51F06CD36003B001D /* LikeService.swift */; };
 		8A8F86B9321E7CC327A6F6DA /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBB95811528D3C81123A37D /* Pods_Makestagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		0E2E00BF1F056BDA006A47BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Makestagram/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		0ED5E29F1F057EE9003B001D /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 		0ED5E2A11F0596AD003B001D /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		0ED5E2A31F059D44003B001D /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
+		0ED5E2A51F06CD36003B001D /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		3B1E605E90CD63F235620215 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		8DBB95811528D3C81123A37D /* Pods_Makestagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makestagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45B140A386580B1E30E8B38 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				0E2E00A21F02DD8F006A47BB /* UserService.swift */,
 				0E2E00B41F044FFC006A47BB /* StorageService.swift */,
 				0E2E00B61F045133006A47BB /* PostService.swift */,
+				0ED5E2A51F06CD36003B001D /* LikeService.swift */,
 			);
 			name = Services;
 			path = ..;
@@ -195,6 +200,7 @@
 			children = (
 				0ED5E29F1F057EE9003B001D /* PostImageCell.swift */,
 				0ED5E2A11F0596AD003B001D /* PostHeaderCell.swift */,
+				0ED5E2A31F059D44003B001D /* PostActionCell.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -349,6 +355,8 @@
 				0E2E00A31F02DD8F006A47BB /* UserService.swift in Sources */,
 				0E2E00B01F03131F006A47BB /* MainTabBarController.swift in Sources */,
 				0E2E00AA1F02F4C5006A47BB /* Storyboard+Utility.swift in Sources */,
+				0ED5E2A41F059D44003B001D /* PostActionCell.swift in Sources */,
+				0ED5E2A61F06CD36003B001D /* LikeService.swift in Sources */,
 				0E2E00B91F045328006A47BB /* Post.swift in Sources */,
 				0ED5E2A01F057EE9003B001D /* PostImageCell.swift in Sources */,
 				0E2E00BB1F056707006A47BB /* UIImage+Size.swift in Sources */,

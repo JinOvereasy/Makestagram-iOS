@@ -9,22 +9,22 @@
 import UIKit
 
 class PostHeaderCell: UITableViewCell {
-
+    
+    static let height: CGFloat = 54
+    
+    // MARK: IBOutlets
     @IBOutlet weak var usernameLabel: UILabel!
     
-    @IBAction func optionsButtonTapped(_ sender: UIButton) {
-        print("options button tapped")
-    }
-    
+    // MARK: functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // MARK: IBActions
+    @IBAction func optionsButtonTapped(_ sender: UIButton) {
+        print("options button tapped")
     }
+
 
 }
