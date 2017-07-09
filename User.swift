@@ -57,10 +57,6 @@ class User: NSObject {
     }
     
     // Mark: - Class Methods
-//    static func setCurrent(_ user: User) {
-//        _current = user
-//    }
-
     // 1
     class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
         // 2

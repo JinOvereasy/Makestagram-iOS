@@ -35,7 +35,6 @@ class Post {
                 "poster" : userDict]
     }
     
-    
     // MARK: - Init
     init(imageURL: String, imageHeight: CGFloat) {
         self.imageURL = imageURL
@@ -68,33 +67,6 @@ class Post {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

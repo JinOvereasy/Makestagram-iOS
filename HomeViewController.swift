@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
     func configureTableView() {
         // remove separators for empty cells
         tableView.tableFooterView = UIView()
+        
         // remove separators from cells
         tableView.separatorStyle = .none
     }
@@ -112,42 +113,6 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
