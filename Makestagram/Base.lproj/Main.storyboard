@@ -30,27 +30,6 @@
             </objects>
             <point key="canvasLocation" x="-881" y="828"/>
         </scene>
-        <!--Find Friends View Controller-->
-        <scene sceneID="AIu-8b-boq">
-            <objects>
-                <viewController id="x03-O6-guX" customClass="FindFriendsViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Pu0-3X-P2a"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qjf-q5-dUb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fxE-m0-5zT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="" image="tab_find_friends_black" id="o9A-CQ-zab">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lMq-wO-jLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-38" y="827"/>
-        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="0d9-mQ-gWp">
             <objects>
@@ -63,7 +42,7 @@
                     <connections>
                         <segue destination="ysB-4M-q0m" kind="relationship" relationship="viewControllers" id="LCY-4R-ySi"/>
                         <segue destination="Efa-kf-b30" kind="relationship" relationship="viewControllers" id="L3d-NR-n4B"/>
-                        <segue destination="x03-O6-guX" kind="relationship" relationship="viewControllers" id="Uea-cr-lvz"/>
+                        <segue destination="DB1-Ru-Urx" kind="relationship" relationship="viewControllers" id="Uea-cr-lvz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8V-8M-BfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,9 +59,18 @@
             </objects>
             <point key="canvasLocation" x="-1720" y="466"/>
         </scene>
+        <!--FindFriends-->
+        <scene sceneID="Ixz-d7-u34">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FindFriends" id="DB1-Ru-Urx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Gks-HQ-8wZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROb-5p-CQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-125" y="466"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="tab_find_friends_black" width="25" height="25"/>
         <image name="tab_plus_black" width="25" height="25"/>
     </resources>
 </document>
