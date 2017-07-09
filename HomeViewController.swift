@@ -82,7 +82,9 @@ extension HomeViewController: UITableViewDataSource {
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell") as! PostActionCell
-            cell.likeCountLabel.text = "\(post.likeCount) likes"
+            //cell.likeCountLabel.text = "\(post.likeCount) likes"
+            cell.delegate = self
+            configureCell(cell, with: post)
             
             return cell
             
@@ -90,6 +92,12 @@ extension HomeViewController: UITableViewDataSource {
             fatalError("Error: unexpected indexPath.")
             
         }
+    }
+    
+    func configureCell(_ cell: PostActionCell, with post: Post) {
+        cell.timeAgoLabel.text = timestampFormatter.string(from: post.creationDate)
+        cell.likeButton.isSelected = post.isLiked
+        cell.likeCountLabel.text = "\(post.likeCount) likes"
     }
 }
 
@@ -113,6 +121,61 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
 }
+
+extension HomeViewController: PostActionCellDelegate {
+    
+    func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
+        // 1
+        guard let indexPath = tableView.indexPath(for: cell)
+            else { return }
+        
+        // 2
+        likeButton.isUserInteractionEnabled = false
+        // 3
+        let post = posts[indexPath.section]
+        
+        // 4
+        LikeService.setIsLiked(!post.isLiked, for: post) { (success) in
+            // 5
+            defer {
+                likeButton.isUserInteractionEnabled = true
+            }
+            // 6
+            guard success else { return }
+            // 7
+            post.likeCount += !post.isLiked ? 1 : -1
+            post.isLiked = !post.isLiked
+            // 8
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
+                else { return }
+            // 9
+            DispatchQueue.main.async {
+                self.configureCell(cell, with: post)
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
