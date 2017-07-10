@@ -11,6 +11,8 @@ import Kingfisher
 
 class HomeViewController: UIViewController {
 
+    let refreshControl = UIRefreshControl()
+    
     let timestampFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
@@ -21,19 +23,32 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     var posts = [Post]()
     
+    
     // MARK: - Subview
     @IBOutlet weak var tableView: UITableView!
+    
     
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
-
-        UserService.posts(for: User.current, completion: {(posts) in
+        reloadTimeline()
+        //        UserService.timeline { (posts) in
+        //            self.posts = posts
+        //            self.tableView.reloadData()
+        //        }
+    }
+    
+    func reloadTimeline() {
+        UserService.timeline { (posts) in
             self.posts = posts
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
             self.tableView.reloadData()
-        })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +62,10 @@ class HomeViewController: UIViewController {
         
         // remove separators from cells
         tableView.separatorStyle = .none
+        
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
 
 }
