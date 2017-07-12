@@ -58,6 +58,7 @@ struct PostService {
     }
     
     static func show(forKey postKey: String, posterUID: String, completion: @escaping (Post?) -> Void) {
+            // let ref = Database.database().reference().child("posts").child(posterUID).child(postKey)
             let ref = Database.database().reference().child("posts").child(posterUID).child(postKey)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in

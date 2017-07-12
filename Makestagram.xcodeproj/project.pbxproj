@@ -14,6 +14,7 @@
 		0E0185EB1F01BA310038F395 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E0185EA1F01BA310038F395 /* GoogleService-Info.plist */; };
 		0E0185F71F01BE730038F395 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0185F61F01BE730038F395 /* Login.storyboard */; };
 		0E0185F91F01BF020038F395 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0185F81F01BF020038F395 /* LoginViewController.swift */; };
+		0E0434231F16DFD6005E6AF3 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434221F16DFD6005E6AF3 /* DatabaseReference+Location.swift */; };
 		0E2E00A01F02CD7B006A47BB /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */; };
 		0E2E00A31F02DD8F006A47BB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E00A21F02DD8F006A47BB /* UserService.swift */; };
 		0E2E00A51F02E6FE006A47BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E00A41F02E6FE006A47BB /* User.swift */; };
@@ -49,6 +50,7 @@
 		0E0185EA1F01BA310038F395 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Makestagram/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E0185F61F01BE730038F395 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0E0185F81F01BF020038F395 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0E0434221F16DFD6005E6AF3 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatabaseReference+Location.swift"; sourceTree = "<group>"; };
 		0E2E009F1F02CD7B006A47BB /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		0E2E00A21F02DD8F006A47BB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0E2E00A41F02E6FE006A47BB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				0E2E00A91F02F4C5006A47BB /* Storyboard+Utility.swift */,
 				0E2E00BA1F056707006A47BB /* UIImage+Size.swift */,
 				0E2E00BC1F0568DC006A47BB /* StorageReference+Post.swift */,
+				0E0434221F16DFD6005E6AF3 /* DatabaseReference+Location.swift */,
 			);
 			name = Extensions;
 			path = ..;
@@ -376,6 +379,7 @@
 				0E2E00B31F042380006A47BB /* MGPhotoHelper.swift in Sources */,
 				0E2E00A01F02CD7B006A47BB /* CreateUsernameViewController.swift in Sources */,
 				0E2E00AE1F0300E0006A47BB /* FindFriendsViewController.swift in Sources */,
+				0E0434231F16DFD6005E6AF3 /* DatabaseReference+Location.swift in Sources */,
 				0E2E00BD1F0568DC006A47BB /* StorageReference+Post.swift in Sources */,
 				0E2E00A71F02F1F7006A47BB /* Constants.swift in Sources */,
 				0E2E00B71F045133006A47BB /* PostService.swift in Sources */,
